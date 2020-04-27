@@ -84,7 +84,7 @@ class Migration(migrations.Migration):
                 ('creation_date', models.DateTimeField(auto_now=True, verbose_name='Date')),
                 ('ip', models.GenericIPAddressField(null=True, verbose_name=b'IP', blank=True)),
                 ('form_data', jsonfield.fields.JSONField(verbose_name='Form Data')),
-                ('created_by', models.ForeignKey(on_delete=models.SET_NULL , ditable=False, to=settings.AUTH_USER_MODEL, null=True, verbose_name='User')),
+                ('created_by', models.ForeignKey(on_delete=models.SET_NULL , editable=False, to=settings.AUTH_USER_MODEL, null=True, verbose_name='User')),
                 ('plugin', models.ForeignKey(on_delete=models.SET_NULL , related_name='submissions', editable=False, to='djangocms_forms.Form', verbose_name='Form')),
             ],
             options={
