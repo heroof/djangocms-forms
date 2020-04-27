@@ -6,6 +6,6 @@ from django.conf.urls import url
 
 from .views import FormSubmission
 
-urlpatterns = [
+urlpatterns.extend([
     url(r'^forms/submit/$', FormSubmission.as_view(), name='djangocms_forms_submissions'),
-]
+])
