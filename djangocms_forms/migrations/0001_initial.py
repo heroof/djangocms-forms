@@ -68,7 +68,7 @@ class Migration(migrations.Migration):
                 ('initial', models.CharField(max_length=255, verbose_name='Default Value', blank=True)),
                 ('choice_values', models.TextField(help_text='Enter options one per line. For "File Upload" field type, enter allowed filetype (e.g .pdf) one per line.', verbose_name='Choices', blank=True)),
                 ('position', models.PositiveIntegerField(null=True, verbose_name='Position', blank=True)),
-                ('form', models.ForeignKey(related_name='fields', to='djangocms_forms.FormDefinition')),
+                ('form', models.ForeignKey(on_delete=models.CASCADE, related_name='fields', to='djangocms_forms.FormDefinition')),
             ],
             options={
                 'ordering': ('position',),
