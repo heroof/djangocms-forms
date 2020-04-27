@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='FormDefinition',
             fields=[
-                ('cmsplugin_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin')),
+                ('cmsplugin_ptr', models.OneToOneField(on_delete=models.CASCADE , parent_link=True, auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin')),
                 ('name', models.CharField(max_length=255, verbose_name='Form Name')),
                 ('title', models.CharField(max_length=150, verbose_name='Title', blank=True)),
                 ('description', models.TextField(verbose_name='Description', blank=True)),
